@@ -47,6 +47,15 @@ moduloUsuario.controller('UsuarioEdit4Controller',
                             $scope.bean = response.data.json.data;
                             $scope.metao = response.data.json.metaObject;
                             $scope.metap = response.data.json.metaProperties;
+
+                            $scope.metap = toolService.deleteForeignKey($scope.metap,"login");
+                            $scope.metap = toolService.deleteForeignKey($scope.metap,"activo");
+                            $scope.metap = toolService.deleteForeignKey($scope.metap, "fecha_alta");
+                            $scope.metap = toolService.deleteForeignKey($scope.metap,"validado");
+                            $scope.metap = toolService.deleteForeignKey($scope.metap,"obj_tipousuario");
+                            $scope.metap = toolService.deleteForeignKey($scope.metap,"obj_grupo");
+                            $scope.metap = toolService.deleteForeignKey($scope.metap,"obj_centro");
+                            $scope.metap = toolService.deleteForeignKey($scope.metap,"obj_centrosanitario");
                         } else {
                             $scope.status = "Error en la recepción de datos del servidor";
                         }
@@ -80,5 +89,6 @@ moduloUsuario.controller('UsuarioEdit4Controller',
                 $scope.close = function () {
                     $location.path('/home');
                 };
+
             }
         ]);
