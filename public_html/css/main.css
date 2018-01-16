@@ -39,6 +39,10 @@ body {
     /* min-height: 2000px; */
     padding-top: 70px;
 }
+#alerta{
+    float:right;
+}
+
 
 .ui-datepicker{ z-index: 9999 !important;}
 
