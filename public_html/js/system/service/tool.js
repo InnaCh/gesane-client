@@ -167,9 +167,7 @@ moduloServicios.factory('toolService', ['$filter', function ($filter) {
                     }
                 }
             },
-            
-            
-            
+
             getUrlFromParams: function (ob, op, numpage, rpp, ufilter, uorder) {
                 var ruta = ob + '/' + op + '/' + numpage + '/' + rpp;
                 ruta += "/" + this.getParamString(ufilter);

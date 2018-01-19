@@ -39,10 +39,21 @@ body {
     /* min-height: 2000px; */
     padding-top: 70px;
 }
-#alerta{
-    float:right;
+#alerta {
+    text-align: left;
+    margin-right: 3.2em;
+    align-items: center;
+}
+#centrar-contenido { 
+    display: flex;
+ 
 }
 
+#centrar-botones { 
+    align-self: center;
+    align-items: center;
+    
+}
 
 .ui-datepicker{ z-index: 9999 !important;}
 
